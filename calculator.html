@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplikasi IMS</title>
+    <link rel="stylesheet" type="text/css" href="style_calculator.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  </head>
+  <body>
+    <form class="main_calc" name="myform">
+      <h2>Aplikasi IMS</h2>
+      <label>Harga Mobil (Rp):</label>
+      <input type="number" id="harga_mobil" value="240000000" /><br />
+
+      <label>DP (%) :</label>
+      <input type="number" id="dp_persen" value="20" /><br />
+
+      <label>Jangka Waktu (bulan) :</label>
+      <input type="number" id="jangka_waktu" value="18" /><br />
+
+      <button type="button" onclick="hitungAngsuran()">Hitung Angsuran</button>
+
+      <h3>Hasil Perhitungan:</h3>
+      <p id="hasil_pokok"></p>
+      <p id="hasil_bunga"></p>
+      <p id="hasil_angsuran"></p>
+    </form>
+
+    <script>
+      function hitungAngsuran() {
+        let harga_mobil = parseFloat(document.getElementById("harga_mobil").value);
+        let dp_persen = parseFloat(document.getElementById("dp_persen").value);
+        let jangka_waktu = parseInt(document.getElementById("jangka_waktu").value);
+
+        let dp = (dp_persen / 100) * harga_mobil;
+        let pokok_utang = harga_mobil - dp;
+
+        let bunga;
+        if (jangka_waktu <= 12) {
+          bunga = 0.12;
+        } else if (jangka_waktu <= 24) {
+          bunga = 0.14;
+        } else {
+          bunga = 0.165;
+        }
+
+        let angsuran_per_bulan = (pokok_utang + pokok_utang * bunga) / jangka_waktu;
+
+        document.getElementById("hasil_pokok").innerText = `Pokok Utang: Rp ${pokok_utang.toLocaleString()}`;
+        document.getElementById("hasil_bunga").innerText = `Bunga: ${(bunga * 100).toFixed(1)}%`;
+        document.getElementById("hasil_angsuran").innerText = `Angsuran Per Bulan: Rp ${angsuran_per_bulan.toLocaleString()}`;
+      }
+    </script>
+  </body>
+</html>
