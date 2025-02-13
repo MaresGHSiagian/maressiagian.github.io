@@ -1,27 +1,7 @@
-# CALCULATOR GROUP5
+Aplikasi IMS Sebelum Perhitungan
+![](https://github.com/user-attachments/assets/8d2e54c8-50ec-4ae1-9eb8-d11097f7e0b8)
 
-Anggota: - Avima Haamesha	(16019102) as mahaamesha
-         - #name		(xxx19xxx) as #usernamegit
-         - #name		(xxx19xxx) as #usernamegit
-
-Program kalkulator web page minimum ada operasi +, -, x, / dalam float semua
-
-BONUS:
-1. #ARCEksplorSekali
-2. Fitur kalkulator saintifik:
-   - sin, cos, tan		- sqrt
-   - sinh, cosh, tanh		- pi
-   - exp			- e
-   - ln				- ans
-   - sq				- +/-
-3. 
+Setelah perhitungan 
+![](https://github.com/user-attachments/assets/c57d6703-6eeb-4300-bc19-16609a339a38)
 
 
-
-#######################################
-Tiap perubahan diberi message jelas ya gaes
-Referensi dasar keypad kalkulator saintifik CASIO fx-911 ID PLUS
-Gpp ga usah terpaku sama referensi, dikembangin aja
-
-Format pesan commit:
-git commit <file> -m "tgl/bln/thn 24:00 nambahin_apa"
